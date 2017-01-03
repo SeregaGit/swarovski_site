@@ -1,0 +1,692 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.wrapper{
+    margin: 0 auto;
+    width: 1280px;
+    font-family: 'PT Sans', sans-serif;
+}
+.wrapperForSlider{
+    margin: 0 auto;
+    width: 1349px;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.headerContent{margin-top: 40px}
+.logoAndTitle, .formForSearch, .connectInfo{float: left;  vertical-align: top;}
+.logoAndTitle{
+    width: 22%;
+}
+
+.formForSearch{
+    width: 43%;
+}
+.searchPic{
+    border: none;
+    background: none;
+}
+.searchPic::before{
+    display: inline-block;
+    content: '\e986';
+    font-family: 'icomoon' !important;
+    color: #cb944c;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.connectInfo{
+    width: 34%;
+    float: right;
+}
+.titleUnderLogo{
+    font-size: 14px;
+}
+
+.inputAreaStyle{
+    width: 90%;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #b9b8bd;
+    padding: 0 35px 0 5px;
+    box-sizing: border-box;
+}
+
+.searchPic{
+    display: inline-block;
+    margin-left: -34px;
+    vertical-align: middle;
+}
+
+.phoneNumber{
+    display: inline-block;
+    font-size: 23px;
+    padding: 5px 0 0 50px;
+    vertical-align: top;
+}
+.workDays{
+    display: inline-block;
+    padding: 0 5px;
+}
+.days, .deliver{
+    font-size: 14px;
+}
+
+.colorMod{
+    color: #cb944c;
+}
+
+
+/*---------------MENU---------------*/
+
+.border{
+    border-top: 1px solid #ECF1F2;
+    border-bottom: 1px solid #ECF1F2;
+    margin-top: 10px;
+}
+nav {
+    display: inline-block;
+    background: white;
+    font-family: 'Open Sans', sans-serif;
+    text-align: left;
+}
+nav:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+a {
+    text-decoration: none;
+    transition: .3s linear;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu{display: inline-block}
+.menu > li {
+    display: inline-block;
+    position: relative;
+    margin-right: -4px;
+}
+
+.menu > li > a {
+    display: block;
+    font-weight: bold;
+    padding: 20px 0;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-family: 'PT Sans', sans-serif;
+    color: #1c1c1c;
+    margin-right: 20px;
+}
+.menu > li > a.marginMod{
+    margin-right: 0;
+}
+
+.submenu-link:before{
+    content: '\e836';
+    font-family: 'icomoon' !important;
+    color: #cb944c;
+    position: absolute;
+    left: 8px;
+    font-size: 8px;
+    top: 15px;
+}
+    .link_menu:before{
+    content: '\e836';
+    font-family: 'icomoon' !important;
+    color: #cb944c;
+    position: absolute;
+    left: 8px;
+    font-size: 8px;
+    top: 15px;
+}
+
+.active::before{
+    content: '\f061';
+    font-family: 'icomoon' !important;
+    font-weight: 300;
+    margin-right: 10px;
+    font-size: 20px;
+    vertical-align: top;
+    color: #cb944c;
+}
+.active:after {
+    content: "\e904";
+    font-family: 'icomoon' !important;
+    color: inherit;
+    margin-left: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    vertical-align: top;
+    color: #cb944c;
+}
+.submenu-link:after{
+    content: "\e905";
+    font-family: 'icomoon' !important;
+    color: inherit;
+    margin-left: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    vertical-align: top;
+    color: #cb944c;
+}
+
+
+.menu li a:hover, .submenu li a:hover {
+    color: #cb944c;
+    background: #e9e9ea;
+}
+.submenu {
+    width: 240px;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    -webkit-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    transform: translateY(10px);
+    transition: .3s ease-in-out;
+    box-shadow: 0 2px 0 0 #ECF1F2;
+}
+.submenu li {
+    position: relative;
+}
+.submenu li a {
+    background: white;
+    border-top: 1px solid #ECF1F2;
+    border-right: 1px solid #ECF1F2;
+    border-left: 1px solid #ECF1F2;
+    display: block;
+    color: #1c1c1c;
+    text-align: left;
+    font-size: 15px;
+    padding: 10px 20px;
+    transition: .3s ease-in-out;
+}
+.submenu .submenu {
+    position: absolute;
+    top: 0;
+    left: calc(100% - 1px);
+    left: -webkit-calc(100% + 3px);
+}
+li:hover > .submenu {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
+}
+/*----------------------------------*/
+
+
+.totalGoodsPrice{
+    display: inline-block;
+    float: right;
+    margin: 20px 49px;
+}
+.totalGoods, .totalCoast, .signInAction {display: inline-block; font-size: 0.9375em; font-weight: 600;}
+.totalCoast {margin-right: 10px}
+.numberOfPurchases{
+    font-weight: 700;
+    padding: 1px 3px;
+    background-color: #cb944c;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    margin-right: 5px;
+}
+.cart{display: inline-block; margin-right: 10px;}
+.cart::after{
+    content: "\e93a";
+    display: inline-block;
+    font-family: 'icomoon' !important;
+    font-weight: 600;
+    font-size: 1.25em;
+    vertical-align: top;
+    color: #cb944c;
+    cursor: pointer;
+}
+.signInAction{border: none;}
+.signIn{
+    border: none;
+    background: none;
+    cursor: pointer;
+    outline: none;
+    font-size: 0.9375em;
+    font-weight: 600;
+}
+.imgForSignIn::after{
+    content: "\e975";
+    display: inline-block;
+    font-family: 'icomoon' !important;
+    font-weight: 600;
+    font-size: 1.25em;
+    vertical-align: top;
+    color: #cb944c;
+    cursor: pointer;
+
+    margin-right: 10px;
+}
+
+
+/*---------Slider-----------*/
+.slider{
+    margin-top: 30px;
+    min-width: 320px;
+}
+
+.sl{
+    width: 100%;
+    margin: 0 auto;
+}
+.slSlide{
+    position: relative;
+    background-size: cover;
+}
+.imgWidth{
+    width: 100%;
+    height: auto;
+}
+
+.slTitle {
+    font-family: 'PT Sans', sans-serif;
+    padding: 10px 40px;
+    background-color: rgba(203, 148, 76, .65);
+    color: white;
+    font-size: 2.625em;
+    width: 500px;
+    display: inline-block;
+    font-weight: 300;
+    position: absolute;
+    top: 50%;
+    left: 6%;
+    box-sizing: border-box;
+
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+}
+
+
+
+
+/*--------------------------*/
+
+/*-----------For size screen 320px/360px screen-------------*/
+
+.button, .menu_link_phone_screen, .menu_min_screen{ display: inline-block}
+.gray_background{
+    min-width: 320px;
+}
+
+.button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.icon-menu{
+    color: white;
+    background-color: #3eade2;
+    padding: 10px 15px;
+    display: inline-block;
+    font-size: 25px;
+}
+.gray_background{
+    background-color: #f0f1f6;
+}
+.link_menu_small_screen {
+    padding: 10px 13px;
+    color: #dbdbdc;
+    font-size: 22px;
+}
+
+/*--------------------------------------------------------------------------------*/
+
+
+
+@media screen and (min-width: 768px) {
+    .displayMod{display: none}
+}
+@media screen and (min-width: 360px) {
+    .gray_background{display: none}
+}
+
+
+@media screen and (max-width: 1280px) {
+    .wrapper {
+        width: 960px;
+
+    }
+    .logoAndTitle {
+        width: 26%;
+    }
+
+    .connectInfo{
+        width: 30%;
+    }
+    .phoneNumber{
+        padding: 5px 0 0 5px;
+        font-size: 18px;
+    }
+    .days, .deliver {
+        font-size: 12px;
+    }
+    .menu > li > a {
+        font-size: 12px;
+        margin-right: 20px;
+    }
+    .totalGoodsPrice {
+        margin: 17px 10px;
+    }
+}
+
+
+@media screen and (max-width: 960px) {
+
+    .wrapper {
+        width: 768px;
+    }
+    .logoAndTitle {
+        margin-right: 20px;
+    }
+    .logoPic{
+        width: 176px;
+        height: auto;
+    }
+    .titleUnderLogo {
+        font-size: 0.75em;
+    }
+    .totalGoodsPrice{
+        margin: 10px 58px;
+    }
+
+    .formForSearch{
+        width: 32%;
+    }
+    .inputAreaStyle{
+        height: 30px;
+    }
+    .searchPic{
+        margin-left: -25px;
+    }
+    .searchPic::before{
+        font-size: 0.75em;
+    }
+    .connectInfo{
+        width: 39%;
+    }
+    .phoneNumber{
+        padding: 5px 0;
+        font-size: 0.9375em;
+        margin-right: 10px;
+    }
+    .days, .deliver{
+        font-size: 0.625em;
+        margin-top: 3px;
+    }
+    .cart::after {
+        font-size: 1em;
+        margin-top: 3px;
+    }
+    .numberOfPurchases, .totalGoods, .totalCoast {
+        font-size: 0.75em;
+    }
+    .signIn{
+        font-size: 1em;
+    }
+
+    .imgForSignIn::after {
+        font-size: 1em;
+        margin-top: 3px;
+    }
+    .border {
+        margin-top: 0;
+    }
+    .menu > li > a {
+        font-size: 0.8125em;
+        padding: 14px 0;
+        margin-right: 25px;
+    }
+    .slider {
+        margin-top: 20px;
+    }
+    .totalGoodsPrice{display: none}
+    .displayMod{display: inline-block}
+
+    .slick-prev:before,
+    .slick-next:before
+    {
+        font-size: 15px;
+    }
+    .slick-prev
+    {
+        padding: 25px 25px 40px 0;
+    }
+    .slick-next
+    {
+        padding: 25px 25px 40px 0;
+    }
+    .slick-prev:before
+    {
+        padding-left: 3px;
+    }
+    .slick-next:before
+    {
+        padding-left: 5px;
+    }
+    .slTitle {
+        padding: 6px 15px;
+        font-size: 1.25em;
+        width: 230px;
+        left: 6%;
+    }
+    .slick-dots li button:before {
+        font-size: 15px;
+    }
+    .slick-dots {
+        bottom: -40px;
+    }
+}
+
+@media screen and (max-width: 760px) {
+
+    .wrapper {
+        width: 640px;
+    }
+    .logoAndTitle {
+        margin-right: 45px;
+        width: 40%;
+    }
+    .formForSearch {
+        width: 50%;
+    }
+
+    .displayMod {
+        display: inline-block;
+        margin: 15px 0 0 194px;
+        float: none;
+    }
+    .totalGoods, .totalCoast, .signInAction {
+        display: inline-block;
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .border{
+        margin-top: 10px;
+    }
+    .menu > li > a {
+        font-size: 0.75em;
+        padding: 15px 0;
+        margin-right: 12px;
+    }
+    .submenu {
+        width: 212px;
+    }
+
+    .connectInfo {
+        margin-top: 5px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .active::before, .active:after, .submenu-link:after {
+        margin: 0 5px 0 5px;
+        font-size: 12px;
+    }
+    .link_menu:before, .submenu-link:before{
+        top: 12px;
+    }
+    .submenu li a {
+        font-size: 10px;
+    }
+    .slick-dots li button:before {
+        font-size: 10px;
+    }
+    .slick-dots {
+        bottom: -20px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+
+    .wrapper {
+        width: 480px;
+    }
+    .logoAndTitle {
+        margin-right: 25px;
+        width: 40%;
+    }
+    .formForSearch {
+        width: 50%;
+    }
+
+    .displayMod {
+        display: inline-block;
+
+        float: none;
+    }
+
+    .menu > li > a {
+        font-size: 8px;
+        padding: 15px 0;
+        margin-right: 12px;
+    }
+    .submenu {
+        width: 212px;
+    }
+
+    .connectInfo {
+        margin: 5px 45px 0 0;
+        width: 100%;
+        text-align: right;
+
+    }
+
+    .active::before, .active:after, .submenu-link:after {
+        margin: 0 5px 0 5px;
+        font-size: 12px;
+    }
+    .link_menu:before, .submenu-link:before{
+        top: 12px;
+    }
+    .submenu li a {
+        font-size: 10px;
+    }
+    .slick-dots li button:before {
+        font-size: 10px;
+    }
+    .slick-dots {
+        bottom: -20px;
+    }
+}
+
+@media screen and (max-width: 455px) {
+    .wrapper {
+        min-width: 320px;
+        max-width: 360px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .gray_background {
+        display: block;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 2;
+    }
+
+    .formForSearch, .border, .connectInfo, .totalGoodsPrice, .menu {
+        display: none;
+    }
+    .logoAndTitle{
+        margin: 20px 0 15px 15px;
+    }
+    .titleUnderLogo {
+        width: 200px;
+        font-size: 0.75em;
+    }
+
+    .slider {
+        margin: 0;
+    }
+
+    .slick-prev:before,
+    .slick-next:before
+    {
+        font-size: 15px;
+    }
+    .slick-prev
+    {
+        padding: 10px 20px 25px 0;
+    }
+    .slick-next
+    {
+        padding: 10px 20px 25px 0;
+    }
+    .slick-next:before
+    {
+        padding-left: 5px;
+    }
+    .slTitle {
+        padding: 3px 5px;
+        font-size: 0.9375em;
+        width: 160px;
+        left: 8%;
+    }
+    .slick-dots li button:before {
+        font-size: 7px;
+    }
+
+}
+
+@media screen and (max-width: 360px) {
+    .wrapper {
+        min-width: 320px;
+        max-width: 320px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .gray_background {
+        display: block;
+    }
+
+    .formForSearch, .connectInfo, .totalGoodsPrice, .menu {
+        display: none;
+    }
+}
